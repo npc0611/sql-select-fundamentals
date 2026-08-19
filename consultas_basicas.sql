@@ -27,3 +27,23 @@ INSERT INTO sales VALUES (1007, '2024-02-18', 205, 306, 'SSD Externo 1TB',    'A
 INSERT INTO sales VALUES (1008, '2024-03-05', 203, 302, 'Mouse Inalámbrico',  'Accesorios',  8,   28.00,  224.00);
 INSERT INTO sales VALUES (1009, '2024-03-12', 204, 303, 'Monitor 4K 27"',     'Computación', 2,  450.00,  900.00);
 INSERT INTO sales VALUES (1010, '2024-03-20', 205, 304, 'Teclado Mecánico',   'Accesorios',  4,   95.00,  380.00);
+
+-- CONSULTA 1. EXPLORACION GENERAL
+
+SELECT * FROM sales;
+
+-- CONSULTA 2. SELECCION ESPECIFICA
+
+SELECT
+    customer_id,
+    product_id,
+    total_amount
+FROM sales;
+
+-- Consulta 3: Nombres amigables con alias
+
+SELECT
+    order_date AS fecha_pedido,
+    product_name AS nombre_producto,
+    quantity AS cantidad_unidades
+FROM sales;
